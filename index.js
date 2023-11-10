@@ -10,3 +10,12 @@ MenuIcon.addEventListener('click', () => {
         MenuIcon.src = './assets/images/icon-menu.png';
     }
 });
+document.addEventListener('click', (event) => {
+    const isClickInsideNav = Navbardropdown.contains(event.target);
+    const isClickOnMenuIcon = event.target === MenuIcon;
+  
+    if (!isClickInsideNav && !isClickOnMenuIcon) {
+      Navbardropdown.classList.add('hidden');
+      MenuIcon.src = './assets/images/icon-menu.png';
+    }
+  });
