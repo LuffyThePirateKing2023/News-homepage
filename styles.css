@@ -21,42 +21,79 @@ body{
     min-height: 100vh;
     background-color: var(--off-white);
 }
+.hidden{
+    opacity: 0;
+}
+.menu-mobile{
+    width: 20%;
+    height: 200px;
+    background-color: var(--Grayish-blue);
+    position: absolute;
+    top:90px;
+    right: 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.menu-mobile ul li{
+    list-style: none;
+    gap: 20px;
+    margin: 20px 0;
+}
+.menu-mobile ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--Dark-grayish-blue);
+}
+.menu-mobile ul li a:hover{
+    color:var(--primary-color-red);
+}
 nav{
     background-color: var(--off-white);
     width: 100%;
     height: 80px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     scroll-behavior: smooth;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    padding: 0 120px;
 }
 nav .logo{
     width: 150px;
     height: 100%;
-    align-items: center;
-    margin-left: 11%;
 }
 nav .logo img{
     width: 50%;
     height: 50%;
     position: relative;
-    left: 50%;
+    left: 0;
     top: 40%;
 }
 nav .navigationBar{
     display: flex;
     width: 700px;
-    margin-left: 550px;
+}
+nav .navigationBar .menuIcon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 8%;
+    right: 120px;
+    cursor: pointer;
+    visibility: hidden;
 }
 nav .navigationBar ul{
     display: flex;
     justify-content: center;
-    position: relative;
     gap: 70px;
     top:60%;
+    position: relative;
 }
 nav .navigationBar li{
     list-style: none;
-    font-size: 18px;
+    font-size: 23px;
     font-weight: 400;
     letter-spacing: 2px;
     color: var(--Dark-grayish-blue);
@@ -74,17 +111,16 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     color: var(--primary-color-orange);
 }
 .container{
-    width: 75%;
+    width: 100%;
     min-height: 100vh;
-    margin-left: 270px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+    padding:20px 100px;
+
 }
 .container .content1{
     width: 100%;
-    height: 480px;
+    height: 550px;
     display: flex;
     gap: 2%;
 }
@@ -94,11 +130,11 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
 }
 .image-web3{
     width: 100%;
-    height: 250px;
-}
-.image-web3 img{
-    width: 100%;
-    height: 100%;
+    height: 300px;
+    padding: 0 0 0 40px;
+    background-image: url("./assets/images/image-web-3-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .web3picture .image-web3:hover{
     transform: scale(1.07);
@@ -106,16 +142,16 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
 }
 .web3content{
     width: 100%;
-    height: 230px;
+    height: 270px;
     display: flex;
     justify-content: space-between;
 }
 .web3content1{
-    width: 51%;
+    width: 44%;
     height: 100%;
 }
 .web3content2{
-    width: 54%;
+    width: 49%;
     height: 100%;
 }
 .web3content1:hover, .web3content2:hover{
@@ -123,29 +159,30 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     transition: 0.4s ease-in-out;
 }
 .web3content1 h1{
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 800;
-    padding-top: 30px;
-    letter-spacing: 1.5px;
-    line-height: 60px;
+    padding: 50px 20px 0 40px;
+    letter-spacing: 1px;
+    line-height: 50px;
 }
 .web3content2 p{
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
-    padding: 30px 20px;
+    padding: 50px 20px 0 20px;
     line-height: 25px;
     letter-spacing: 2.4px;
     color: var(--Dark-grayish-blue);
 }
 .web3content2 button{
-    width: 150px;
-    height: 45px;
+    width: 130px;
+    height: 40px;
     margin-left: 20px;
+    margin-top: 10px;
     border: none;
     background-color: var(--primary-color-red);
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     color: var(--off-white);
     cursor: pointer;
 }
@@ -156,7 +193,7 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
 }
 .container .content1 .newIconArea{
     width: 41%;
-    height: 100%;
+    height: 90%;
     background-color: var(--Very-dark-blue);
 }
 .newIconArea:hover{
@@ -164,28 +201,29 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     transition: all 0.5s ease; 
 }
 .newIconArea h1{
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 700;
     color: var(--primary-color-orange);
-    padding: 20px 40px 10px 40px;
+    padding: 40px;
 }
 .newIconArea h3{
+    font-size: 18px;
     color: var(--off-white);
     margin: 20px 40px 20px 40px;
     letter-spacing: 2.5px;
     padding-right: 20px;
 }
 .newIconArea p{
-    line-height: 25px;
+    line-height: 20px;
     font-size: 15px;
     font-weight: 400;
     color: var(--Dark-grayish-blue);
 }
 .newIconArea .first-content{
-    margin-top: 10px 0 15px 0;
+    margin-top: 10px 0 10px 0;
 }
 .newIconArea .first-content p{
-    margin: 10px 0 0 0;
+    margin: 10px 0 20px 0;
 }
 .newIconArea .second-content{
     margin-top: 10px;
@@ -193,28 +231,30 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     flex-direction: column;
 }
 .newIconArea .second-content p{
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
 }
 .second-content::before, .second-content::after{
     content: "";
     width: 100%;
     height: 1.5px;
     background-color: var(--Dark-grayish-blue);
-    margin: 10px 0 15px 0;
+    margin: 20px 0;
 }
 .newIconArea .third-content p{
     margin: 10px 0 0 0;
 }
 .content2 {
     width: 100%;
-    height: 150px;
+    height: 170px;
     display: grid;
-    grid-template-columns: 120px 300px 120px 300px 120px 280px;
-    margin-top: 30px;
+    grid-template-columns: repeat(3, 150px 340px);
+    margin-top: 10px;
+    padding-left: 25px;
+    gap: 10px;
 }
 .content2 img{
     width: 100%;
-    height: 100%;
+    height: 170px;
 }
 .content2 img:hover{
     transform: scale(1.1);
@@ -223,59 +263,148 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
 .content2 h2{
     font-size: 30px;
     font-weight: 700;
-    padding: 10px 30px 5px 30px;
+    padding: 10px 10px 5px 20px;
     color: var(--Grayish-blue);
+    letter-spacing: 2px;
 }
 .content2 h3{
     font-size: 22px;
     font-weight: 600;
-    padding: 5px 30px;
+    padding: 5px 20px;
     letter-spacing: 1px;
 }
 .content2 p{
     font-size: 17px;
     font-weight: 400;
-    padding: 10px 0 5px 30px;
+    padding: 10px 0 5px 20px;
     color: var(--Dark-grayish-blue);
     line-height: 25px;
+    letter-spacing: 2px;
 }
 .content2-item2:hover, .content2-item4:hover, .content2-item6:hover{
     transform: scale(1.1);
     transition: all 0.5s ease; 
 }
-/* @media screen and (min-width: 300px) and (max-width: 900px){
+@media screen and (min-width: 300px) and (max-width: 900px){
+    body{
+        width: 100%;
+        min-height: 1000px !important;
+        overflow: auto;
+    }
     nav{
         width: 100%;
-        position: absolute;
-        margin-bottom: 0;
-        display: flex;
-        justify-content: flex-start;
-        border: 2px solid black;
+        padding: 0 20px;
     }
     nav .logo{
-        position: absolute;
-        margin: 0;
-        height: 50px;
-        width: 50px;
+       display: block;
+        
     }
-    nav .logo img{
-        left: 0;
+    nav ul{
+        display: none;
     }
-    nav .navigationBar .imageIcon{
-        position: absolute;
-        top: 5%;
-        right: 10%;
-        width: 100px;
-        height: 120px;
-        margin-right: 0;
+    nav ul li a{
+        display: none;
+    }
+    nav .navigationBar .menuIcon{
+        display: block;
+        visibility: visible;
+        width: 30px;
+        height: 20px;
+        right: 20px;
+        top: 65px;
+    }
+    nav .navigationBar .menuIcon img{
+        width: 100%;
+        height: 100%;
     }
     .container{
+        position: relative;
         width: 100%;
         min-height: 100vh;
-        position: absolute;
-        margin-left: 0;
-        margin-top:100px;
+        padding:0 10px;
+        margin: 0;
+    }
+    .container .content1{
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        min-height: 500px;
+        gap: 0;
     }
+    .content1 .web3picture{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: inherit;
+        gap: 0;
+    }
+    .content1 .web3picture .image-web3{
+        background-image: url("./assets/images/image-web-3-mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+    }
+    .content1 .web3picture .web3content{
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        padding: 0;
+    }
+    .web3content1{
+        width: 100%;
+        height: 150px;
+        margin-top: 15px;
+        padding-right: 100px;
+    }
+    .web3content2{
+        width: 100%;
+        height: 150px;
+        padding-right: 100px;
+    }
+    .web3content1 h1{
+        font-size: 30px;
+        font-weight: 800;
+        padding: 0;
+        line-height: 35px;
+    }
+    .web3content2 p{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 2.4px;
+        margin-top: 10px;
+        padding: 0;
+    }
+    .web3content2 button{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .web3picture .image-web3:hover, .web3content1:hover, .web3content2:hover,.web3content2 button:hover,
+    .newIconArea:hover,.content2 img:hover,.content2-item2:hover, .content2-item4:hover, .content2-item6:hover{
+        transform: none;
+        transition: none;
+    }
+    .container .content1 .newIconArea{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .content2{
+        margin-top: 500px;
+        width: 100%;
+        grid-template-columns: 23% 75%;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 10px;
+        padding-left: 0;
+        overflow: auto;
+    }
+
+}
+/* .content2 {
+    width: 100%;
+    height: 170px;
+    display: grid;
+    grid-template-columns: repeat(3, 150px 340px);
+    margin-top: 10px;
+    padding-left: 25px;
+    gap: 10px;
 } */
