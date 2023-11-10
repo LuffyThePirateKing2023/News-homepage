@@ -279,7 +279,7 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     line-height: 25px;
     letter-spacing: 2px;
 }
-.content2-item1:hover, .content2-item2:hover, .content2-item6:hover{
+.items{
     transform: scale(1.1);
     transition: all 0.5s ease; 
 }
