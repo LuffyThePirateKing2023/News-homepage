@@ -378,7 +378,7 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
         margin-top: 10px;
     }
     .web3picture .image-web3:hover, .web3content1:hover, .web3content2:hover,.web3content2 button:hover,
-    .newIconArea:hover,.content2 img:hover,.content2-item2:hover, .content2-item4:hover, .content2-item6:hover{
+    .newIconArea:hover,.content2 .items:hover{
         transform: none;
         transition: none;
     }
