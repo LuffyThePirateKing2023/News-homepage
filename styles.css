@@ -25,12 +25,12 @@ body{
     opacity: 0;
 }
 .menu-mobile{
-    width: 20%;
-    height: 200px;
-    background-color: var(--Grayish-blue);
+    width: 30%;
+    height: 215px;
+    background-color:var(--off-white);
     position: absolute;
-    top:90px;
     right: 0;
+    top: 90px;
     padding: 0 15px;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@ body{
 .menu-mobile ul li a{
     text-decoration: none;
     font-size: 15px;
-    color: var(--Dark-grayish-blue);
+    color: var(--Very-dark-blue);
 }
 .menu-mobile ul li a:hover{
     color:var(--primary-color-red);
@@ -54,11 +54,10 @@ nav{
     width: 100%;
     height: 80px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     scroll-behavior: smooth;
     margin: 10px 0;
-    padding: 0 120px;
+    padding: 0 100px;
 }
 nav .logo{
     width: 150px;
@@ -73,7 +72,8 @@ nav .logo img{
 }
 nav .navigationBar{
     display: flex;
-    width: 700px;
+    max-width: 700px;
+    text-align: center;
 }
 nav .navigationBar .menuIcon{
     position: absolute;
@@ -87,9 +87,8 @@ nav .navigationBar .menuIcon{
 nav .navigationBar ul{
     display: flex;
     justify-content: center;
-    gap: 70px;
-    top:60%;
-    position: relative;
+    gap: 40px;
+    align-items: center;
 }
 nav .navigationBar li{
     list-style: none;
@@ -112,17 +111,18 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
 }
 .container{
     width: 100%;
-    min-height: 100vh;
+    min-height: 1000px;
     display: flex;
     flex-direction: column;
     padding:20px 100px;
+    gap: 20px;
 
 }
 .container .content1{
     width: 100%;
-    height: 550px;
+    min-height: 550px;
     display: flex;
-    gap: 2%;
+    gap:2%;
 }
 .web3picture{
     width: 76%;
@@ -161,7 +161,7 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
 .web3content1 h1{
     font-size: 45px;
     font-weight: 800;
-    padding: 50px 20px 0 40px;
+    padding: 50px 20px 0 0;
     letter-spacing: 1px;
     line-height: 50px;
 }
@@ -193,7 +193,7 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
 }
 .container .content1 .newIconArea{
     width: 41%;
-    height: 90%;
+    min-height: 500px;
     background-color: var(--Very-dark-blue);
 }
 .newIconArea:hover{
@@ -205,6 +205,7 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     font-weight: 700;
     color: var(--primary-color-orange);
     padding: 40px;
+
 }
 .newIconArea h3{
     font-size: 18px;
@@ -220,7 +221,7 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     color: var(--Dark-grayish-blue);
 }
 .newIconArea .first-content{
-    margin-top: 10px 0 10px 0;
+    margin-left: 40px;
 }
 .newIconArea .first-content p{
     margin: 10px 0 20px 0;
@@ -245,20 +246,17 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
 }
 .content2 {
     width: 100%;
-    height: 170px;
-    display: grid;
-    grid-template-columns: repeat(3, 150px 340px);
-    margin-top: 10px;
-    padding-left: 25px;
-    gap: 10px;
+    min-height: 20px;
+    display: flex;
 }
-.content2 img{
-    width: 100%;
-    height: 170px;
+.content2 .items{
+    display: flex;
+    min-height: 100px;
+    width: 33.33%;
 }
-.content2 img:hover{
-    transform: scale(1.1);
-    transition: all 0.5s ease; 
+.content2 .items img{
+    width: 140px;
+    height: 100%;
 }
 .content2 h2{
     font-size: 30px;
@@ -281,14 +279,14 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     line-height: 25px;
     letter-spacing: 2px;
 }
-.content2-item2:hover, .content2-item4:hover, .content2-item6:hover{
+.content2-item1:hover, .content2-item2:hover, .content2-item6:hover{
     transform: scale(1.1);
     transition: all 0.5s ease; 
 }
 @media screen and (min-width: 300px) and (max-width: 900px){
     body{
         width: 100%;
-        min-height: 1000px !important;
+        min-height: 2000px !important;
         overflow: auto;
     }
     nav{
@@ -320,22 +318,22 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     .container{
         position: relative;
         width: 100%;
-        min-height: 100vh;
+        min-height: 2000px;
         padding:0 10px;
         margin: 0;
     }
     .container .content1{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        min-height: 500px;
-        gap: 0;
+        justify-content: unset;
+        min-height: 800px;
     }
     .content1 .web3picture{
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: inherit;
+        min-height: 500px;
+        margin-bottom: 20px;
         gap: 0;
     }
     .content1 .web3picture .image-web3{
@@ -359,7 +357,7 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     .web3content2{
         width: 100%;
         height: 150px;
-        padding-right: 100px;
+        padding-right: 10px;
     }
     .web3content1 h1{
         font-size: 30px;
@@ -386,25 +384,24 @@ nav .navigationBar li:hover, nav .navigationBar a:hover{
     }
     .container .content1 .newIconArea{
         width: 100%;
-        margin-top: 30px;
+        min-height: 600px;
+        margin-top: 20px;
     }
-    .content2{
-        margin-top: 500px;
+    .newIconArea h1, .newIconArea h3, .newIconArea p{
+        padding: 20px 10px;
+    } 
+    .newIconArea .first-content, .newIconArea .second-content, .newIconArea .third-content{
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+    .content2 {
         width: 100%;
-        grid-template-columns: 23% 75%;
-        grid-template-rows: repeat(3, auto);
-        grid-gap: 10px;
-        padding-left: 0;
-        overflow: auto;
+        min-height: 20px;
+        display: flex;
+        flex-direction: column;
     }
-
+    .content2 .items{
+        width: 100%;
+        margin: 10px 0
+    }
 }
-/* .content2 {
-    width: 100%;
-    height: 170px;
-    display: grid;
-    grid-template-columns: repeat(3, 150px 340px);
-    margin-top: 10px;
-    padding-left: 25px;
-    gap: 10px;
-} */
